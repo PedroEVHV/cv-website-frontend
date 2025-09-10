@@ -1,0 +1,68 @@
+body {
+  background-color: #2a2a2a; /* Dark theme background */
+  color: #e0e0e0; /* Light text */
+  margin: 0;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+}
+
+.main-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.section-wrapper {
+  margin-bottom: 2rem; /* Space between sections */
+}
+
+.section-header {
+  font-size: 2.5rem; /* Larger header */
+  font-weight: bold;
+  color: #fff; /* White for contrast */
+  text-align: left; /* Left-aligned */
+  margin: 0 0 1rem 0; /* Top and bottom margin */
+  cursor: default; /* Indicate interactivity */
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 80%; /* Limit width for readability */
+  margin: 0 auto; /* Center the text */
+  opacity: 0; /* Hidden by default */
+  transform: translateX(-10%); /* Start closer to center */
+  transition: opacity 0.3s ease, transform 0.5s ease; /* Smooth animation */
+}
+
+.section-wrapper:hover .section-text {
+  opacity: 1; /* Show text on hover over wrapper */
+  transform: translateX(0); /* Slide in to center */
+}
+
+.language-flags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.language-flags img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .section-header {
+    font-size: 2rem; /* Smaller on mobile */
+  }
+  .section-text {
+    max-width: 100%; /* Full width on mobile */
+  }
+}

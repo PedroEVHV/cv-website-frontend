@@ -1,0 +1,67 @@
+header {
+  background: #222; /* Dark header background */
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+header h1 {
+  color: #fff; /* Bright white for title */
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  background: #1a1a1a; /* Very dark background for sticky nav */
+  padding: 0.75rem;
+  position: sticky; /* Make the nav sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure nav stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout for menu items */
+  justify-content: center; /* Center the menu items */
+  gap: 1.5rem; /* Space between menu items */
+}
+
+nav li {
+  display: inline; /* Ensure list items are inline for horizontal layout */
+}
+
+nav a {
+  color: #e0e0e0; /* Light text for links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background: #333; /* Slightly lighter background on hover */
+  color: #fff;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background: #1DA1F2; /* Accent color for active route */
+  color: #fff;
+  border-radius: 4px;
+}
+
+.tech-profile {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tech-profile img {
+  height: 30px;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}

@@ -1,0 +1,83 @@
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensure equal height for children */
+  gap: 2rem; /* Space between image and contact info */
+  max-width: 90%;
+  margin: 2rem auto;
+  flex-wrap: wrap; /* Allow stacking on small screens */
+}
+
+/* Image Section (Blue Box) */
+.image-section {
+  flex: 0 0 40%; /* Same width as contact info */
+  text-align: center;
+
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Contact Info (Black Box) - Styled like Experience Card */
+.contact-info {
+  flex: 0 0 40%; /* Same width as image */
+  padding: 1rem;
+  background-color: #2a2a2a; /* Match Experience card background */
+  border: 1px solid #444; /* Match Experience card border */
+  border-radius: 8px; /* Match Experience card radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Match Experience card shadow */
+  color: #e0e0e0; /* Light text for readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text to the top */
+  align-items: flex-start; /* Ensure content aligns to the left/top */
+}
+
+.contact-info h2 {
+  color: #fff; /* White for header, consistent with theme */
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.language-flags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.language-flags img {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.linkedin-link {
+  color: #fff !important; /* Overrides default link color */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+.linkedin-link:hover {
+  color: #e0e0e0; /* Optional: slight change on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .image-section {
+    flex: 0 0 100%; /* Full width on mobile */
+  }
+  .contact-info {
+    flex: 0 0 100%; /* Full width on mobile */
+  }
+}

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-color: #1a1a1a;
+  color: #e0e0e0; /* Light text for contrast against dark theme */
+}
+
+main {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+}
