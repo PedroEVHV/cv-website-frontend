@@ -12,7 +12,7 @@ export interface Company {
 })
 export class CompanyService {
 
-  private apiUrl = 'http://localhost:8080/api/company-institution'; // adjust path if needed
+  private apiUrl = 'http://localhost:8080/api/company-institution'; 
 
   constructor(private http: HttpClient) {}
 

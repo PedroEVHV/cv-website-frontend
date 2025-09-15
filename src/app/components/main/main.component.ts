@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Company, CompanyService } from '../../services/company.service'; // Adjust path as needed
+import { Company, CompanyService } from '../../services/company.service'; 
 
 @Component({
   selector: 'app-main',

@@ -12,7 +12,7 @@ export interface Country {
 })
 export class CountryService {
 
-  private apiUrl = 'http://localhost:8080/api/country'; // adjust path if needed
+  private apiUrl = 'http://localhost:8080/api/country';
 
   constructor(private http: HttpClient) {}
 

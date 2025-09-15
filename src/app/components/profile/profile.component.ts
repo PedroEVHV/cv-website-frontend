@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
     this.experienceService.getAll().subscribe(data => {
       this.experience = data.map(e => ({
         ...e,
-        // if your field isn’t named "description", swap in the correct one here
+
         bullets: this.splitBullets(e.description as any)
       }));
       
