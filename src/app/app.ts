@@ -5,13 +5,15 @@ import { ExperienceService, Experience } from './services/experience.service';
 import { EducationService, Education } from './services/education.service';
 import { CountryService, Country } from './services/country.service';
 import { CompanyService, Company } from './services/company.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, FooterComponent],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css'],
+
 })
 export class App implements OnInit {
   experiences: Experience[] = [];

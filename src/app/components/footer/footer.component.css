@@ -1,0 +1,12 @@
+.tech-profile {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tech-profile img {
+  height: 30px;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}

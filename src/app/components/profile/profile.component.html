@@ -1,34 +1,8 @@
-
-
 <!-- Experience Section -->
 <section class="border border-blue-600 rounded-lg p-6">
   <h3 class="section-title">Experience</h3>
 
-<div *ngFor="let exp of experience" class="experience-card">
-  <!-- Header -->
-  <div class="experience-header">
-      <span class="title">
-        {{ exp.jobTitle }} - 
-        <span class="company-name">
-          {{ exp.company?.name }}
-          <span class="tooltip" *ngIf="exp.company?.url">
-            <a [href]="exp.company?.url" target="_blank" rel="noopener">{{exp.company?.url}}</a>
-          </span>
-        </span>
-      </span>
-      <span class="meta">
-        {{ exp.startDate }} - {{ exp.endDate }}
-        <img class="flag" [src]="'resources/flags/' + exp.country?.countryFlag + '.png'" alt="{{ exp.country?.countryName }}">
-      </span>
-    </div>
-
-  <!-- Content -->
-  <div class="experience-body" *ngIf="exp.bullets.length">
-    <ul>
-      <li *ngFor="let point of exp.bullets">{{ point }}</li>
-    </ul>
-  </div>
-</div>
+  <content-card *ngFor="let exp of experience" [content]="experienceIntoGeneric(exp)" ></content-card>
 
 </section>
 
@@ -36,28 +10,7 @@
 <!-- Education Section -->
 <section class="mb-10 border border-blue-600 rounded-lg p-6">
   <h3 class="section-title">Education</h3>
+  <content-card *ngFor="let edu of education" [content]="educationIntoGeneric(edu)" ></content-card>
 
-  <div class="experience-card" *ngFor="let edu of education">
-    <div class="experience-header">
-      <span class="title">
-        {{ edu.courseTitle }} - 
-        <span class="company-name">
-          {{ edu.institution?.name }}
-          <span class="tooltip" *ngIf="edu.institution?.url">
-            <a [href]="edu.institution?.url" target="_blank" rel="noopener">Visit Website</a>
-          </span>
-        </span>
-      </span>
-      <span class="meta">
-        {{ edu.startDate}} - {{ edu.endDate}}
-        <img class="flag" [src]="'resources/flags/' + edu.country?.countryFlag + '.png'" alt="{{ edu.country?.countryName }} flag">
-      </span>
-    </div>
-    <div class="experience-body">
-      <ul>
-        <li *ngFor="let point of edu.bullets">{{ point }}</li>
-      </ul>
-    </div>
-  </div>
 </section>
 

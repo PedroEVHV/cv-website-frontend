@@ -1,0 +1,25 @@
+<div class="content-card">
+    <!-- Header -->
+    <div class="content-header">
+      <span class="content-header-1">
+        {{ content?.headerTitle_1 }} - 
+        <span class="content-header-2">
+          {{ content?.headerTitle_2 }}
+          <span class="tooltip" *ngIf="content?.headerUrl">
+            <a [href]="content?.headerUrl" target="_blank" rel="noopener">{{ content?.headerUrl }}</a>
+          </span>
+        </span>
+      </span>
+      <span class="meta">
+        {{ content?.date_1 }} - {{ content?.date_2 }}
+        <img class="flag" [src]="'resources/flags/' + content?.imgUrl + '.png'" alt="img">
+      </span>
+    </div>
+
+    <!-- Description -->
+    <div class="content-card-body" *ngIf="content?.bullets.length">
+        <ul>
+        <li *ngFor="let point of content?.bullets">{{ point }}</li>
+        </ul>
+    </div>
+</div>
